@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-8">
+      <!-- Columna Izquierda -->
+      <lista-productos titulo="COMIDA" [productos]="arrComida" (seleccionaProducto)="onSeleccionaProducto($event)"></lista-productos>
+      <lista-productos titulo="BEBIDA" [productos]="arrBebida" (seleccionaProducto)="onSeleccionaProducto($event)"></lista-productos>
+    </div>
+    <div class="col-12 col-md-4">
+      <!-- Columna derecha -->
+      <comanda [productos]="productosSeleccionados"></comanda>
+    </div>
+  </div>
+</div>

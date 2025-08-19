@@ -1,0 +1,13 @@
+<div class="comanda">
+    <p>TOTAL: {{ calcularTotal() | currency:'EUR' }}</p>
+    <ul>
+        @for(producto of productos; track $index){
+        <li>
+            {{producto.nombre}} x {{producto.cantidad}} x {{producto.precio * producto.cantidad | currency:'EUR'}}
+            <button (click)="onClickDelete($index)" class="btn btn-danger btn-sm">🧻</button>
+        </li>
+        }@empty {
+        <li>No hay productos</li>
+        }
+    </ul>
+</div>

@@ -1,0 +1,16 @@
+<div class="lista-productos">
+    <h2>{{ titulo }}</h2>
+    <div class="productos">
+        @for (producto of productos; track $index) {
+        <article class="producto" (click)="onClick(producto)">
+            <div class="imagen" [style.background-image]=" 'url(' + producto.imagen + ')' ">
+                <span class="stock">
+                    {{producto.stock > 0 ? producto.stock : 'NO'}}
+                </span>
+                <p>{{producto.nombre}}</p>
+            </div>
+            <!-- <img [src]="producto.imagen" alt=""> -->
+        </article>
+        }
+    </div>
+</div>

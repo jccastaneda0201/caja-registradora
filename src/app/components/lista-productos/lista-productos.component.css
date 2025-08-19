@@ -1,0 +1,69 @@
+.productos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    background-color: lightblue;
+    border: 2px solid dodgerblue;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.producto {
+    width: 150px;
+
+    img {
+        display: block;
+        height: auto;
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.producto .imagen {
+    width: 100%;
+    height: 150px;
+    position: relative;
+
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+
+    p {
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(128, 128, 128, 0.8);
+        color: white;
+        width: 100%;
+        height: 40%;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transition: .2s;
+    }
+}
+
+.producto .imagen:hover p {
+    font-size: 18px;
+}
+
+.stock {
+    position: absolute;
+    top: -10px;
+    left: -5px;
+    background-color: dodgerblue;
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
